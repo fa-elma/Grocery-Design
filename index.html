@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Featured Products</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Soace Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-green': '#3BB77E',
+                        'brand-light-green': '#DEF9EC',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-gray-800 p-6 md:p-10">
+
+    <!-- Main Container -->
+    <div class="max-w-7xl mx-auto relative">
+        
+        <!-- Header Section -->
+        <div class="flex justify-between items-center mb-8 flex-wrap gap-4">
+            <h2 class="text-3xl font-bold text-gray-900">Featured Products</h2>
+            <ul class="flex space-x-6 text-sm font-medium">
+                <li class="cursor-pointer hover:text-brand-green transition text-gray-500">All</li>
+                <li class="cursor-pointer text-brand-green">Vegetables</li>
+                <li class="cursor-pointer hover:text-brand-green transition text-gray-500">Fruits</li>
+                <li class="cursor-pointer hover:text-brand-green transition text-gray-500">Coffe & teas</li>
+                <li class="cursor-pointer hover:text-brand-green transition text-gray-500">Meat</li>
+            </ul>
+        </div>
+
+        <!-- Product Grid Wrapper -->
+        <div class="relative mt-4">
+            
+            <!-- Left Arrow Button -->
+            <button class="absolute -left-4 md:-left-12 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full flex justify-center items-center text-gray-600 hover:bg-brand-green hover:text-white shadow-md border border-gray-200 transition-all z-10 hidden sm:flex">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                </svg>
+            </button>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                
+                <!-- Product 1: Redish -->
+                <div class="border border-gray-200 rounded-xl p-5 hover:border-brand-green hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition duration-300 relative group bg-white">
+                    <img src="assets/image/redish.jpg" alt="Redish" class="w-full h-40 object-contain mb-4 transition transform group-hover:scale-105">
+                    <p class="text-xs text-gray-400 mb-1">Vegetables</p>
+                    <h3 class="text-base font-bold text-gray-800 mb-1">Redish 500g</h3>
+                    <div class="flex items-center space-x-1 mb-3">
+                        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+                        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+                        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+                        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+                        <span class="text-gray-400 text-xs ml-1">(4)</span>
+                    </div>
+                    <p class="text-xs text-gray-400 mb-4">By <span class="text-brand-green">Mr.food</span></p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-brand-green font-bold text-lg">$2</span>
+                            <span class="text-gray-400 text-sm line-through">$3.99</span>
+                        </div>
+                        <button class="bg-brand-light-green text-brand-green font-semibold px-4 py-2 rounded flex items-center space-x-1 hover:bg-brand-green hover:text-white transition">
+                            <img src="assets/image/cart.jpg" class="w-4 h-4 mix-blend-multiply" alt="cart"> 
+                            <span>Add</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2: Potatoes -->
+                <div class="border border-gray-200 rounded-xl p-5 hover:border-brand-green hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition duration-300 relative group bg-white">
+                    <img src="assets/image/potatos.jpg" alt="Potatoes" class="w-full h-40 object-contain mb-4 transition transform group-hover:scale-105">
+                    <p class="text-xs text-gray-400 mb-1">Vegetables</p>
+                    <h3 class="text-base font-bold text-gray-800 mb-1">Potatos 1kg</h3>
+                    <div class="flex items-center space-x-1 mb-3">
+                        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+                        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+                        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+                        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+                        <span class="text-gray-400 text-xs ml-1">(4)</span>
+                    </div>
+                    <p class="text-xs text-gray-400 mb-4">By <span class="text-brand-green">Mr.food</span></p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-brand-green font-bold text-lg">$1</span>
+                            <span class="text-gray-400 text-sm line-through">$1.99</span>
+                        </div>
+                        <button class="bg-brand-light-green text-brand-green font-semibold px-4 py-2 rounded flex items-center space-x-1 hover:bg-brand-green hover:text-white transition">
+                            <img src="assets/image/cart.jpg" class="w-4 h-4 mix-blend-multiply" alt="cart"> 
+                            <span>Add</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3: Tomatos -->
+                <div class="border border-gray-200 rounded-xl p-5 hover:border-brand-green hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition duration-300 relative group bg-white">
+                    <img src="assets/image/tomatos.jpg" alt="Tomatos" class="w-full h-40 object-contain mb-4 transition transform group-hover:scale-105">
+                    <p class="text-xs text-gray-400 mb-1">Fruits</p>
+                    <h3 class="text-base font-bold text-gray-800 mb-1">Tomatos 200g</h3>
+                    <div class="flex items-center space-x-1 mb-3">
+                        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+                        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+                        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+                        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+                        <span class="text-gray-400 text-xs ml-1">(4)</span>
+                    </div>
+                    <p class="text-xs text-gray-400 mb-4">By <span class="text-brand-green">Mr.food</span></p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-brand-green font-bold text-lg">$0.30</span>
+                            <span class="text-gray-400 text-sm line-through">$0.99</span>
+                        </div>
+                        <button class="bg-brand-light-green text-brand-green font-semibold px-4 py-2 rounded flex items-center space-x-1 hover:bg-brand-green hover:text-white transition">
+                            <img src="assets/image/cart.jpg" class="w-4 h-4 mix-blend-multiply" alt="cart"> 
+                            <span>Add</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4: Broccoli -->
+                <div class="border border-gray-200 rounded-xl p-5 hover:border-brand-green hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition duration-300 relative group bg-white">
+                    <img src="assets/image/broccoli.jpg" alt="Broccoli" class="w-full h-40 object-contain mb-4 transition transform group-hover:scale-105">
+                    <p class="text-xs text-gray-400 mb-1">Vegetables</p>
+                    <h3 class="text-base font-bold text-gray-800 mb-1">Broccoli 1kg</h3>
+                    <div class="flex items-center space-x-1 mb-3">
+                        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+                        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+                        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+                        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+                        <span class="text-gray-400 text-xs ml-1">(4)</span>
+                    </div>
+                    <p class="text-xs text-gray-400 mb-4">By <span class="text-brand-green">Mr.food</span></p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-brand-green font-bold text-lg">$1.50</span>
+                            <span class="text-gray-400 text-sm line-through">$2.99</span>
+                        </div>
+                        <button class="bg-brand-light-green text-brand-green font-semibold px-4 py-2 rounded flex items-center space-x-1 hover:bg-brand-green hover:text-white transition">
+                            <img src="assets/image/cart.jpg" class="w-4 h-4 mix-blend-multiply" alt="cart"> 
+                            <span>Add</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5: Green Beans -->
+<div class="border border-gray-200 rounded-xl p-5 hover:border-brand-green hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition duration-300 relative group bg-white">
+    <img src="assets/image/green%20beans.jpg" alt="green beans" class="w-full h-40 object-contain mb-4 transition transform group-hover:scale-105">
+    <p class="text-xs text-gray-400 mb-1">Vegetables</p>
+    <h3 class="text-base font-bold text-gray-800 mb-1">Green Beans 250g</h3>
+    <div class="flex items-center space-x-1 mb-3">
+        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+        <img src="assets/image/star.jpg" class="w-3.5 h-3.5 object-contain" alt="star">
+        <span class="text-gray-400 text-xs ml-1">(4)</span>
+    </div>
+    <p class="text-xs text-gray-400 mb-4">By <span class="text-brand-green">Mr.food</span></p>
+    <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <span class="text-brand-green font-bold text-lg">$1</span>
+            <span class="text-gray-400 text-sm line-through">$1.99</span>
+        </div>
+        <button class="bg-brand-light-green text-brand-green font-semibold px-4 py-2 rounded flex items-center space-x-1 hover:bg-brand-green hover:text-white transition">
+            <img src="assets/image/cart.jpg" class="w-4 h-4 mix-blend-multiply" alt="cart"> 
+            <span>Add</span>
+        </button>
+    </div>
+</div>
+
+            <!-- Right Arrow Button -->
+            <button class="absolute -right-4 md:-right-12 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full flex justify-center items-center text-gray-600 hover:bg-brand-green hover:text-white shadow-md border border-gray-200 transition-all z-10 hidden sm:flex">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+            </button>
+
+        </div>
+    </div>
+
+</body>
+</html>
